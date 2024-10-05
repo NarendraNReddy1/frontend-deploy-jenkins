@@ -92,6 +92,7 @@ resource "aws_launch_template" "frontend" {
   update_default_version = true # sets the latest version to default
 
   vpc_security_group_ids = [data.aws_ssm_parameter.frontend_sg_id.value]
+  
 
   tag_specifications {
     resource_type = "instance"
